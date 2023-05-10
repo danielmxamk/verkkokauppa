@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model kayttaja {
+  id          Int     @id @default(autoincrement())
+  tunnus      String  @db.Text
+  salasana    String  @db.Text
+  lupa        Boolean @default(false)
+  ostoskoriId Int?
+}
+
+model korintuote {
+  id          Int @id @default(autoincrement())
+  ostoskoriId Int
+  tuoteId     Int
+  maara       Int
+}
+
+model ostoskori {
+  id Int @id @default(autoincrement())
+}
+
+model tuote {
+  id    Int    @id @default(autoincrement())
+  nimi  String @db.Text
+  hinta Int
+}
+
+model tilaus {
+  id               Int @id @default(autoincrement())
+  tilaustiedotId   Int
+  tilausTuotteetId Int
+}
+
+model tilaustiedot {
+  id       Int    @id @default(autoincrement())
+  osoite   String @db.Text
+  kayttaja Int?
+  nimi     Int
+}
+
+model tilaustuote {
+  id       Int @id @default(autoincrement())
+  tuoteId  Int
+  tilausId Int
+  maara    Int
+}

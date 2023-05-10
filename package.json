@@ -1,0 +1,39 @@
+{
+  "name": "so6-oppimistehtava",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npx nodemon index.ts"
+  },
+  "description": "Tämä on repository Sovellusohjelmointi 2 -opintojakson oppimistehtävän palautukseen. Kaikki palautukset oppimistehtäviin tulee sijoittaa sitä vastaavaan GitHub-repositoryyn. Jokaiselle oppimistehtävälle luodaan uusi repository tehtävänannon yhteydessä olevasta linkistä.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xamk-so2/oppimistehtava-4-danielmxamk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xamk-so2/oppimistehtava-4-danielmxamk/issues"
+  },
+  "homepage": "https://github.com/xamk-so2/oppimistehtava-4-danielmxamk#readme",
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.0",
+    "@prisma/client": "^4.12.0",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "react-router-dom": "^6.10.0",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.1",
+    "nodemon": "^2.0.21",
+    "prisma": "^4.12.0",
+    "ts-node": "^10.9.1"
+  }
+}
